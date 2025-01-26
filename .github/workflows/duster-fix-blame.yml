@@ -5,7 +5,7 @@ name: Duster Fix
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
 
 jobs:
