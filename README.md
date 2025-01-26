@@ -76,7 +76,7 @@ Laravel Dev Kit is a starter kit for Laravel applications, designed to save time
 
 - [Node.js](https://nodejs.org/) (for frontend tooling)
 - [Composer](https://getcomposer.org/) (for PHP dependencies)
-- A fresh Laravel application
+- A fresh [Laravel](https://laravel.com) application
 
 ### Installation
 
