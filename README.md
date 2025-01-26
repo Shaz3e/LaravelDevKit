@@ -99,9 +99,7 @@ Laravel Dev Kit is a starter kit for Laravel applications, designed to save time
     npm install
     ```
 
-4. Configure Husky hooks:
-
-5. Customize `.env` for your Laravel application.
+4. Customize `.env` for your Laravel application.
 
 ### Usage
 

@@ -4,7 +4,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "prepare": "husky install",
+        "prepare": "husky",
         "format": "npx prettier --write resources/"
     },
     "devDependencies": {
