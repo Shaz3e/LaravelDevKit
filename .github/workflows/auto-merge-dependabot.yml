@@ -16,26 +16,25 @@ jobs:
       github.event.pull_request.user.login == 'dependabot[bot]' &&
       github.event.pull_request.state == 'open'
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Automatically approve Dependabot PRs
-      uses: hmarr/auto-approve-action@v3
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Automatically approve Dependabot PRs
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Merge Dependabot PRs
-      if: |
-        github.event.review.state == 'approved' ||
-        contains(github.event.pull_request.labels.*.name, 'automerge')
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        gh pr merge ${{ github.event.pull_request.number }} --squash --admin --auto
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge Dependabot PRs
+        if: |
+          github.event.review.state == 'approved' ||
+          contains(github.event.pull_request.labels.*.name, 'automerge')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          gh pr merge ${{ github.event.pull_request.number }} --squash --admin --auto
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 ---
-
- #### Explanation:
+#### Explanation:
 checks under usages were annotated

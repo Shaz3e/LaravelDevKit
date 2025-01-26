@@ -38,4 +38,3 @@ jobs:
         with:
           commit_message: "Fixes coding style"
           branch: master
-          
