@@ -99,7 +99,12 @@ Laravel Dev Kit is a starter kit for Laravel applications, designed to save time
     npm install
     ```
 
-4. Customize `.env` for your Laravel application.
+4. Copy `.env.example` to `.env` for your Laravel application.
+
+5. Generate Key
+    ```bash
+    php artisan key:generate
+    ```
 
 ### Usage
 
@@ -156,7 +161,7 @@ Laravel Dev Kit simplifies the setup process for Laravel applications, integrati
 
 This project utilizes and integrates various tools and resources to provide an optimized development experience. Special thanks to:
 
-- aravel: For providing a robust PHP framework.
+- Laravel: For providing a robust PHP framework.
 - LaraStan: For powerful static analysis tailored to Laravel applications.
 - PHPStan: A static analysis tool that ensures code quality.
 - Pint: Laravel's official code formatter for PHP.
